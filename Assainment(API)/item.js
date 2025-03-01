@@ -96,6 +96,10 @@ const handleAddToCart = (PD_Image, PD_Name, PD_Price) => {
 
     const div = document.createElement("div");
     div.classList.add("Cart-Info");
+   if(count > 11){
+        alert("Sorry,You can't selected more product upto 11");
+        return 0;
+    }
     div.innerHTML = `
           <img class="cart-img" src=${PD_Image} alt=""/>
         <p> ${PD_Name}</p>
